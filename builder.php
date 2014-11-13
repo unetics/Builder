@@ -5,7 +5,7 @@ Plugin URI:        https://github.com/unetics/Builder
 Description:       A drag and drop, responsive page builder that simplifies building your website.
 Version:           1.0.1
 Author:            Mitchell Bray
-Text Domain:       github-updater
+Text Domain:       Builder
 GitHub Plugin URI: https://github.com/unetics/Builder
 GitHub Branch:     master
 */
@@ -54,16 +54,6 @@ function siteorigin_panels_admin_enqueue_scripts($prefix) {
 		wp_enqueue_script( 'jquery-ui-sortable' );
 		wp_enqueue_script( 'jquery-ui-dialog' );
 		wp_enqueue_script( 'jquery-ui-button' );
-/*
-		wp_enqueue_script( 'undomanager', plugin_dir_url(__FILE__) . 'js/undomanager.js', array( ), 'fb30d7f', true );
-		wp_enqueue_script( 'chosen', plugin_dir_url(__FILE__) . 'js/chosen/chosen.jquery.min.js', array( 'jquery' ), 1, true );
-		wp_enqueue_script( 'panels-admin', plugin_dir_url(__FILE__) . 'js/panels.admin.js', array( 'jquery' ),1, true );
-		wp_enqueue_script( 'panels-admin-panels', plugin_dir_url(__FILE__) . 'js/panels.admin.panels.js', array( 'jquery' ),1, true );
-		wp_enqueue_script( 'panels-admin-grid', plugin_dir_url(__FILE__) . 'js/panels.admin.grid.js', array( 'jquery' ), 1, true );
-		wp_enqueue_script( 'panels-admin-prebuilt', plugin_dir_url(__FILE__) . 'js/panels.admin.prebuilt.js', array( 'jquery' ),1, true );
-		wp_enqueue_script( 'panels-admin-tooltip', plugin_dir_url(__FILE__) . 'js/panels.admin.tooltip.js', array( 'jquery' ),1, true );
-		wp_enqueue_script( 'panels-admin-media', plugin_dir_url(__FILE__) . 'js/panels.admin.media.js', array( 'jquery' ),1, true );
-*/
 		wp_enqueue_script( 'panels', plugin_dir_url(__FILE__) . 'js/panels.min.js', array( 'jquery' ),1, true );
 
 		wp_localize_script( 'panels', 'panels', array(
