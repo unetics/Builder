@@ -5,5 +5,4 @@
 //@codekit-append "panels.admin.grid.js"
 //@codekit-append "panels.admin.prebuilt.js"
 //@codekit-append "panels.admin.tooltip.js"
-//@codekit-append "panels.admin.media.js"
 //@codekit-append "panels.admin.styles.js"

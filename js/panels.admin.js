@@ -1,8 +1,5 @@
 /**
  * Initial setup for the panels interface
- *
- * @copyright Greg Priday 2013
- * @license GPL 2.0 http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 jQuery( function ( $ ) {
@@ -71,20 +68,7 @@ jQuery( function ( $ ) {
                     }
                 }
             ]
-        })
-/*
-        .on('keydown', function(e) {
-            if (e.keyCode == $.ui.keyCode.ENTER) {
-                // This is the same as clicking the add button
-                gridAddDialogButtons[panels.i10n.buttons.add]();
-                setTimeout(function(){$( '#grid-add-dialog' ).dialog( 'close' );}, 1)
-            }
-            else if (e.keyCode === $.ui.keyCode.ESCAPE) {
-                $( '#grid-add-dialog' ).dialog( 'close' );
-            }
         });
-*/
-    ;
 
     // Create the main add widgets dialog
     $( '#panels-dialog' ).show()

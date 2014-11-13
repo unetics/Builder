@@ -1,8 +1,5 @@
 /**
  * A simple tooltip for the panel interface.
- *
- * @copyright Greg Priday 2013
- * @license GPL 2.0 http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 jQuery( function ( $ ) {
@@ -18,7 +15,6 @@ jQuery( function ( $ ) {
 
     /**
      * Show the tooltip.
-     *
      * @returns {*}
      */
     $.fn.panelsShowTooltip = function () {
@@ -39,7 +35,6 @@ jQuery( function ( $ ) {
 
     /**
      * Remove the tooltip.
-     *
      * @returns {*}
      */
     $.fn.panelsRemoveTooltip = function () {

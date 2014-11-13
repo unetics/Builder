@@ -1,8 +1,5 @@
 /**
  * Intercepts the standard WordPress gallery insert and edit.
- *
- * @copyright Greg Priday 2013
- * @license GPL 2.0 http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 jQuery(function($){
@@ -94,7 +91,7 @@ jQuery(function($){
 
             var val = dialog.find('*[name$="[ids]"]').val();
             if(val.indexOf('{demo') === 0 || val.indexOf('{default') === 0) val = '-'; // This removes the demo or default content
-            if(val == '' && $('#post_ID' ).val() == null) val = '-';
+            if(val === '' && $('#post_ID' ).val() === null) val = '-';
 
             var frame = wp.media.gallery.edit('[gallery ids="' + val + '"]');
 
@@ -113,4 +110,4 @@ jQuery(function($){
             return false;
         }
     }, '.so-gallery-widget-select-attachments');
-})
+});
