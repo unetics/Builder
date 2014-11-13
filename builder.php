@@ -48,7 +48,6 @@ function siteorigin_panels_admin_enqueue_scripts($prefix) {
 		wp_enqueue_script( 'jquery-ui-dialog' );
 		wp_enqueue_script( 'jquery-ui-button' );
 		wp_enqueue_script( 'panels', plugin_dir_url(__FILE__) . 'js/panels.min.js', array( 'jquery' ),1, true );
-
 		wp_localize_script( 'panels', 'panels', array(
 			'previewUrl' => wp_nonce_url(add_query_arg('siteorigin_panels_preview', 'true', get_home_url()), 'siteorigin-panels-preview'),
 			'i10n' => array(
@@ -58,7 +57,6 @@ function siteorigin_panels_admin_enqueue_scripts($prefix) {
 					'delete' 		=> 'Delete',
 					'duplicate' 	=> 'Duplicate',
 					'edit' 			=> 'Edit',
-					'done' 			=> 'Done',
 					'undo' 			=> 'Undo',
 					'add' 			=> 'Add'
 				),
@@ -79,17 +77,15 @@ function siteorigin_panels_admin_enqueue_scripts($prefix) {
 		$missing_widgets = array();
 		if ( !empty( $panels_data['widgets'] ) ) {
 			foreach ( $panels_data['widgets'] as $i => $widget ) {
-
-				// There's a chance the widget was activated by siteorigin_panels_widget_is_missing
+				// There's a chance the widget ismissing
 				if ( empty( $wp_widget_factory->widgets[ $widget['info']['class'] ] ) ) {
 					$missing_widgets[$widget['info']['class']] = apply_filters('siteorigin_panels_missing_widget_data', array(
 						'title' => str_replace( '_', ' ', $widget['info']['class'] ),
-						'description' => __('Install the missing widget', 'siteorigin-panels'),
+						'description' => "Install the missing widget",
 					), $widget['info']['class']);
 				}
 			}
 		}
-
 		if( !empty($missing_widgets) ) {
 			wp_localize_script( 'panels', 'panelsMissingWidgets', $missing_widgets );
 		}

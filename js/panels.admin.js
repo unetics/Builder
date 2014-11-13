@@ -72,6 +72,7 @@ jQuery( function ( $ ) {
                 }
             ]
         })
+/*
         .on('keydown', function(e) {
             if (e.keyCode == $.ui.keyCode.ENTER) {
                 // This is the same as clicking the add button
@@ -82,6 +83,7 @@ jQuery( function ( $ ) {
                 $( '#grid-add-dialog' ).dialog( 'close' );
             }
         });
+*/
     ;
 
     // Create the main add widgets dialog

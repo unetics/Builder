@@ -198,7 +198,7 @@
                             draggable:   false,
                             resizable:   false,
                             title:       panels.i10n.messages.editWidget.replace( '%s', panel.data( 'title' ) ),
-                            width:   Math.round($(window).width() * 0.9),
+                            width:    Math.round($(window).width() * 0.9),
                             height:   Math.round($(window).height() * 0.875),
                             create:      function(event, ui){
                                 $(this ).closest('.ui-dialog' ).find('.show-in-panels' ).show();
@@ -222,7 +222,7 @@
                             },
                             buttons: [
                                 {
-                                    text: panels.i10n.buttons.done,
+                                    text: "Done",
                                     click: function(){
                                         doneClicked = true;
                                         $( this ).trigger( 'panelsdone', panel, activeDialog );
