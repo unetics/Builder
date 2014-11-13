@@ -99,16 +99,16 @@
                         $( '<div class="ui-button ui-button-icon-only"><div class="dashicons dashicons-trash"></div></div>' )
                             .attr( 'data-tooltip', 'delete')
                             .click( function () {
-                                $( this ).panelsRemoveTooltip();
+                                $(this).panelsRemoveTooltip();
 
                                 // Create an array that represents this grid
                                 var containerData = [];
-                                container.find('.cell' ).each(function(i, el){
+                                container.find('.cell').each(function(i, el){
                                     containerData[i] = {
-                                        'weight' : Number($(this ).attr('data-percent')),
+                                        'weight' : Number($(this).attr('data-percent')),
                                         'widgets' : []
                                     };
-                                    $(this ).find('.panel' ).each(function(j, el){
+                                    $(this).find('.panel').each(function(j, el){
                                         containerData[i]['widgets'][j] = {
                                             type : $(this ).attr('data-type'),
                                             data : $(this ).panelsGetPanelData()
@@ -210,23 +210,21 @@
                     )
                     // Add the move/reorder button
                     .append(
-                        $( '<div class="ui-button ui-button-icon-only grid-handle"><div class="dashicons dashicons-sort"></div></div>' )
+                        $('<div class="ui-button ui-button-icon-only grid-handle"><div class="dashicons dashicons-sort"></div></div>')
                     )
             );
 
-/*
         // Hide the row style button if none are available
         if( ! Object.keys(panelsStyleFields).length ) {
             container.find('.panels-visual-style').remove();
         }
-*/
 
         var grid = $( '<div />' ).addClass( 'grid' ).appendTo( container );
 
         for ( var i = 0; i < cells; i++ ) {
             var cell = $(
                 '<div class="cell" data-percent="' + (weights[i] / weightSum) + '">' +
-                    '<div class="cell-wrapper panels-container"><button class="panels-add ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" data-tooltip="Add Widget" role="button" aria-disabled="false"><span class="ui-button-text"><div class="dashicons dashicons-plus"></div></span></button></div>' +
+                    '<div class="cell-wrapper panels-container"></div>' +
                     '<div class="cell-width"><div class="cell-width-left"></div><div class="cell-width-right"></div><div class="cell-width-line"></div><div class="cell-width-value"><span></span></div></div>' +
                     '</div>'
             );
@@ -258,7 +256,7 @@
      */
     panels.setupGrid = function ( $$ ) {
         // Hide the undo message
-        $('#panels-undo-message' ).fadeOut(function(){ $(this ).remove() });
+        $('#panels-undo-message' ).fadeOut(function(){ $(this).remove() });
 
         $$.panelsResizeCells();
 
@@ -269,8 +267,8 @@
                 handles:    'w',
                 containment:'parent',
                 start:      function ( event, ui ) {
-                    sharedCellWidth = $( this ).prev().outerWidth();
-                    sharedCellLeft = $( this ).prev().position().left;
+                    sharedCellWidth = $(this).prev().outerWidth();
+                    sharedCellLeft  = $(this).prev().position().left;
                 },
                 stop:       function ( event, ui ) {
                     $$.find( '.grid .cell' ).not( '.first' ).resizable( 'disable' ).resizable( 'enable' );
@@ -310,10 +308,10 @@
             return false;
         } );
 
-        $$.find( '.grid .cell' )
+        $$.find('.grid .cell')
             .click(function(){
-                $( '.grid .cell' ).removeClass('cell-selected');
-                $(this ).addClass('cell-selected');
+                $('.grid .cell').removeClass('cell-selected');
+                $(this).addClass('cell-selected');
             })
             .each( function () {
                 var percent = Number( $( this ).attr( 'data-percent' ) );

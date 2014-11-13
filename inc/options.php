@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Get the settings
  *
@@ -54,7 +53,7 @@ function siteorigin_panels_setting($key = ''){
  * Add the options page
  */
 function siteorigin_panels_options_admin_menu() {
-	add_options_page( __('SiteOrigin Page Builder', 'siteorigin-panels'), __('Page Builder', 'siteorigin-panels'), 'manage_options', 'siteorigin_panels', 'siteorigin_panels_options_page' );
+	add_options_page( 'siteorigin-panels', 'Page Builder', 'manage_options', 'siteorigin_panels', 'siteorigin_panels_options_page' );
 }
 add_action( 'admin_menu', 'siteorigin_panels_options_admin_menu' );
 
@@ -62,7 +61,7 @@ add_action( 'admin_menu', 'siteorigin_panels_options_admin_menu' );
  * Display the admin page.
  */
 function siteorigin_panels_options_page(){
-	include plugin_dir_path(__FILE__) . '/tpl/options.php';
+	include plugin_dir_path(__FILE__) . 'options-page.php';
 }
 
 /**
