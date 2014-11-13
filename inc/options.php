@@ -62,7 +62,7 @@ add_action( 'admin_menu', 'siteorigin_panels_options_admin_menu' );
  * Display the admin page.
  */
 function siteorigin_panels_options_page(){
-	include plugin_dir_path(SITEORIGIN_PANELS_BASE_FILE) . '/tpl/options.php';
+	include plugin_dir_path(__FILE__) . '/tpl/options.php';
 }
 
 /**

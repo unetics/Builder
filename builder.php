@@ -3,14 +3,12 @@
 Plugin Name:       Builder
 Plugin URI:        https://github.com/unetics/Builder
 Description:       A drag and drop, responsive page builder that simplifies building your website.
-Version:           1.0.2
+Version:           1.0.3
 Author:            Mitchell Bray
 Text Domain:       Builder
 GitHub Plugin URI: https://github.com/unetics/Builder
 GitHub Branch:     master
 */
-
-define('SITEORIGIN_PANELS_BASE_FILE', __FILE__);
 
 include plugin_dir_path(__FILE__) . 'inc/options.php';
 include plugin_dir_path(__FILE__) . 'inc/revisions.php';

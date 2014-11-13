@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Filter content before we save it.
  *
@@ -92,7 +91,6 @@ function siteorigin_panels_content_save_pre_get(){
 		$content = preg_replace("/[\n]{2,}/", "\n\n", $content);
 		$content = trim($content);
 	}
-
 	echo $content;
 	exit();
 }
