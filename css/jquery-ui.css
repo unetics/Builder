@@ -1,0 +1,152 @@
+#panels .ui-button,
+#add-to-panels .ui-button,
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar-close {
+  outline: none;
+  display: inline-block;
+  position: relative;
+  margin-right: .1em;
+  text-decoration: none !important;
+  cursor: pointer;
+  text-align: center;
+  zoom: 1;
+  overflow: visible;
+  padding: 5px;
+  margin: 0;
+  height: auto;
+  border: 1px solid #C0C0C0;
+}
+#panels .ui-button.ui-button-icon-only .ui-button-text,
+#add-to-panels .ui-button.ui-button-icon-only .ui-button-text,
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar-close.ui-button-icon-only .ui-button-text {
+  display: none;
+}
+#panels .ui-button .ui-icon,
+#add-to-panels .ui-button .ui-icon,
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar-close .ui-icon {
+  display: block;
+  width: 8px;
+  height: 8px;
+}
+#panels .ui-button .ui-icon.ui-icon-add,
+#add-to-panels .ui-button .ui-icon.ui-icon-add,
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar-close .ui-icon.ui-icon-add {
+  background: url(images/icons/add.png);
+}
+#panels .ui-button .ui-icon.ui-icon-prebuilt,
+#add-to-panels .ui-button .ui-icon.ui-icon-prebuilt,
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar-close .ui-icon.ui-icon-prebuilt {
+  background: url(images/icons/brush.png);
+}
+#panels .ui-button .ui-icon.ui-icon-columns,
+#add-to-panels .ui-button .ui-icon.ui-icon-columns,
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar-close .ui-icon.ui-icon-columns {
+  background: url(images/icons/columns.png);
+}
+#panels .ui-button .ui-icon.ui-icon-settings,
+#add-to-panels .ui-button .ui-icon.ui-icon-settings,
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar-close .ui-icon.ui-icon-settings {
+  background: url(images/icons/settings.png);
+}
+#panels .ui-button .ui-icon.ui-icon-move,
+#add-to-panels .ui-button .ui-icon.ui-icon-move,
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar-close .ui-icon.ui-icon-move {
+  background: url(images/icons/move.png);
+}
+#panels .ui-button .ui-icon.ui-icon-remove,
+#add-to-panels .ui-button .ui-icon.ui-icon-remove,
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar-close .ui-icon.ui-icon-remove {
+  background: url(images/icons/remove.png);
+}
+#panels .ui-button .ui-icon.ui-icon-gear,
+#add-to-panels .ui-button .ui-icon.ui-icon-gear,
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar-close .ui-icon.ui-icon-gear {
+  background: url(images/icons/gear.png);
+}
+/* jQuery UI Dialog */
+.ui-dialog.panels-admin-dialog {
+  border: 1px solid #D0D0D0;
+  background: white;
+  z-index: 80002 !important;
+  padding: 0 !important;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-buttonpane {
+  border: none;
+  border-top: 1px solid #dddddd;
+  background: #f1f1f1;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar {
+  background: #e0e0e0;
+  line-height: 1;
+  border: 1px solid #ccc;
+  border-color: #ccc #ccc #c0c0c0 #ccc;
+  padding: 10px;
+  font-size: 13px;
+  color: #505050;
+  text-shadow: rgba(255, 255, 255, 0.6) 0px 1px 0px;
+  font-weight: 600;
+  position: relative;
+  margin: -1px -1px 0 -1px;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  margin-top: -10px;
+  width: auto;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:before {
+  display: none;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: url(images/icons/close.png);
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-content {
+  padding: 12px;
+  max-height: 600px;
+  overflow: auto;
+  background: #ffffff no-repeat center center;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-content *:first-child {
+  margin-top: 0;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-content *:last-child {
+  margin-bottom: 0;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-content label {
+  color: #333;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-content p:hover label {
+  color: #1c1c1c;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-content textarea,
+.ui-dialog.panels-admin-dialog .ui-dialog-content input.widefat {
+  margin-top: 6px;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-content p {
+  margin: 15px 0 5px 0;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-content p.description {
+  margin-top: 5px;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-content.ui-dialog-content-loading {
+  background-image: url('images/ajax-loader-small.gif');
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-buttonpane {
+  padding: 5px;
+}
+.ui-dialog.panels-admin-dialog .ui-dialog-buttonpane .ui-button {
+  outline: none;
+  margin-right: 8px;
+  border: 1px solid #1b607f;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+}
+.ui-dialog.panels-admin-dialog.panels-ajax-loading .ui-dialog-buttonpane {
+  background: #f1f1f1 url(images/ajax-loader-small-grey.gif) no-repeat 15px 22px;
+}

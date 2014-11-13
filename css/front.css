@@ -1,0 +1,43 @@
+/*
+.panel-grid {
+    zoom: 1;
+}
+*/
+/*
+.panel-grid:before {
+    content: '';
+    display: block;
+}
+.panel-grid:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+*/
+/*
+.panel-grid-cell {
+    box-sizing: border-box;
+    min-height: 1em;
+}
+.panel-grid-cell .panel {
+    zoom: 1;
+    min-height: 1em;
+}
+.panel-grid-cell .panel:before {
+    content: '';
+    display: block;
+}
+.panel-grid-cell .panel:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+*/
+/*
+.panel-grid-cell .panel.panel-last-child {
+    margin-bottom: 0;
+}
+.panel-grid-cell .widget-title {
+    margin-top: 0;
+}
+*/
