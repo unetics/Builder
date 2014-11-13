@@ -1,8 +1,5 @@
 /**
  * Handles row styling.
- *
- * @copyright Greg Priday 2014
- * @license GPL 2.0 http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 jQuery( function($){
@@ -11,14 +8,14 @@ jQuery( function($){
     $( '#grid-styles-dialog' )
         .show()
         .dialog( {
-            dialogClass: 'panels-admin-dialog',
-            autoOpen: false,
-            modal: false, // Disable modal so we don't mess with media editor. We'll create our own overlay.
-            draggable:   false,
-            resizable:   false,
-            title:   $( '#grid-styles-dialog' ).attr( 'data-title' ),
-            maxHeight:   Math.round($(window).height() * 0.8),
-            width: 500,
+            dialogClass: 	'panels-admin-dialog',
+            autoOpen: 		false,
+            modal: 			false, // Disable modal so we don't mess with media editor. We'll create our own overlay.
+            draggable:   	false,
+            resizable:  	false,
+            title:   		$( '#grid-styles-dialog' ).attr( 'data-title' ),
+            maxHeight:   	Math.round($(window).height() * 0.8),
+            width: 			Math.round($(window).width() * 0.8),
             open:    function () {
                 var overlay = $('<div class="siteorigin-panels ui-widget-overlay ui-widget-overlay ui-front"></div>').css('z-index', 80001);
                 $(this).data('overlay', overlay).closest('.ui-dialog').before(overlay);
@@ -45,7 +42,7 @@ jQuery( function($){
             buttons: [
                 {
                     // The done button
-                    text : panels.i10n.buttons.done,
+                    text : "Done",
                     click: function(){
                         $( '#grid-styles-dialog' ).dialog( 'close' );
                     }
