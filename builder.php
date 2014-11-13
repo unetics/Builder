@@ -3,7 +3,7 @@
 Plugin Name:       Builder
 Plugin URI:        https://github.com/unetics/Builder
 Description:       A drag and drop, responsive page builder that simplifies building your website.
-Version:           1.0.0
+Version:           1.0.1
 Author:            Mitchell Bray
 Text Domain:       github-updater
 GitHub Plugin URI: https://github.com/unetics/Builder
@@ -19,13 +19,13 @@ include plugin_dir_path(__FILE__) . 'inc/copy.php';
 include plugin_dir_path(__FILE__) . 'inc/styles.php';
 include plugin_dir_path(__FILE__) . 'inc/debug.php';
 
-/** Hook for activation of Page Builder. */
+/* Hook for activation of Page Builder. */
 function siteorigin_panels_activate(){
 	add_option('siteorigin_panels_initial_version', SITEORIGIN_PANELS_VERSION, '', 'no');
 }
 register_activation_hook(__FILE__, 'siteorigin_panels_activate');
 
-/** Callback to register the Page Builder Metaboxes */
+/* Callback to register the Page Builder Metaboxes */
 function siteorigin_panels_metaboxes() {
 	foreach( siteorigin_panels_setting( 'post-types' ) as $type ){
 		add_meta_box( 'so-panels-panels', 'Page Builder', 'siteorigin_panels_metabox_render', $type, 'advanced', 'high' );
@@ -33,7 +33,7 @@ function siteorigin_panels_metaboxes() {
 }
 add_action( 'add_meta_boxes', 'siteorigin_panels_metaboxes' );
 
-/** Check if we're currently viewing a page builder page. */
+/* Check if we're currently viewing a page builder page. */
 function siteorigin_panels_is_panel($can_edit = false){
 	// Check if this is a panel
 	$is_panel =  ( is_singular() && get_post_meta(get_the_ID(), 'panels_data', false) != '' );
