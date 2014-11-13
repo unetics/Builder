@@ -1,8 +1,5 @@
 /**
  * Grid layout for the Panel interface
- *
- * @copyright Greg Priday 2013
- * @license GPL 2.0 http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 (function($){
@@ -217,17 +214,19 @@
                     )
             );
 
+/*
         // Hide the row style button if none are available
         if( ! Object.keys(panelsStyleFields).length ) {
             container.find('.panels-visual-style').remove();
         }
+*/
 
         var grid = $( '<div />' ).addClass( 'grid' ).appendTo( container );
 
         for ( var i = 0; i < cells; i++ ) {
             var cell = $(
                 '<div class="cell" data-percent="' + (weights[i] / weightSum) + '">' +
-                    '<div class="cell-wrapper panels-container"></div>' +
+                    '<div class="cell-wrapper panels-container"><button class="panels-add ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" data-tooltip="Add Widget" role="button" aria-disabled="false"><span class="ui-button-text"><div class="dashicons dashicons-plus"></div></span></button></div>' +
                     '<div class="cell-width"><div class="cell-width-left"></div><div class="cell-width-right"></div><div class="cell-width-line"></div><div class="cell-width-value"><span></span></div></div>' +
                     '</div>'
             );

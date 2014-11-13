@@ -9,7 +9,7 @@ $layouts = apply_filters( 'siteorigin_panels_prebuilt_layouts', array() );
 	<div id="panels-container"></div>
 	
 	<div id="add-to-panels">
-		<button class="panels-add" data-tooltip="Add Widget"><div class="dashicons dashicons-plus"></div></button>
+		<button class="panels-add" data-tooltip="Add Module"><div class="dashicons dashicons-plus"></div></button>
 		<button class="grid-add" data-tooltip="Add Row"><div class="dashicons dashicons-editor-insertmore"></div></button>
 		<?php if(!empty($layouts)) : ?>
 			<button class="prebuilt-set" data-tooltip="Prebuilt Layouts"><div class="dashicons dashicons-welcome-widgets-menus"></div></button>
