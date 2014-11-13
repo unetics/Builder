@@ -10,7 +10,6 @@ GitHub Plugin URI: https://github.com/unetics/Builder
 GitHub Branch:     master
 */
 
-define('SITEORIGIN_PANELS_VERSION', '1.5.1');
 define('SITEORIGIN_PANELS_BASE_FILE', __FILE__);
 
 include plugin_dir_path(__FILE__) . 'inc/options.php';
@@ -19,10 +18,6 @@ include plugin_dir_path(__FILE__) . 'inc/copy.php';
 include plugin_dir_path(__FILE__) . 'inc/styles.php';
 include plugin_dir_path(__FILE__) . 'inc/debug.php';
 
-/* Hook for activation of Page Builder. */
-function siteorigin_panels_activate(){
-	add_option('siteorigin_panels_initial_version', SITEORIGIN_PANELS_VERSION, '', 'no');
-}
 register_activation_hook(__FILE__, 'siteorigin_panels_activate');
 
 /* Callback to register the Page Builder Metaboxes */
@@ -135,9 +130,9 @@ add_action( 'admin_print_scripts-appearance_page_so_panels_home_page', 'siteorig
 function siteorigin_panels_admin_enqueue_styles() {
 	$screen = get_current_screen();
 	if ( in_array( $screen->id, siteorigin_panels_setting('post-types') ) || $screen->base == 'appearance_page_so_panels_home_page') {
-		wp_enqueue_style( 'so-panels-admin', plugin_dir_url(__FILE__) . 'css/admin.css', array( ), SITEORIGIN_PANELS_VERSION );
+		wp_enqueue_style( 'so-panels-admin', plugin_dir_url(__FILE__) . 'css/admin.css', array( ));
 		wp_enqueue_style( 'wp-jquery-ui-dialog' );
-		wp_enqueue_style( 'so-panels-chosen', plugin_dir_url(__FILE__) . 'js/chosen/chosen.css', array(), SITEORIGIN_PANELS_VERSION );
+		wp_enqueue_style( 'so-panels-chosen', plugin_dir_url(__FILE__) . 'js/chosen/chosen.css', array());
 		do_action( 'siteorigin_panel_enqueue_admin_styles' );
 	}
 }

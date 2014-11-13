@@ -7,8 +7,8 @@ $layouts = apply_filters( 'siteorigin_panels_prebuilt_layouts', array() );
 
 	<?php do_action('siteorigin_panels_before_interface') ?>
 
-	<div id="panels-container">
-	</div>
+	<div id="panels-container"></div>
+	
 	<div id="add-to-panels">
 		<button class="panels-add" data-tooltip="Add Widget"><div class="dashicons dashicons-plus"></div></button>
 		<button class="grid-add" data-tooltip="Add Row"><div class="dashicons dashicons-editor-insertmore"></div></button>
@@ -19,9 +19,7 @@ $layouts = apply_filters( 'siteorigin_panels_prebuilt_layouts', array() );
 		<div class="clear"></div>
 	</div>
 	
-	<?php // The add new widget dialog ?>
-	
-	<div id="panels-dialog" data-title="Add New Widget" class="panels-admin-dialog">
+	<div id="panels-dialog" data-title="Add New Module" class="panels-admin-dialog">
 		<div id="panels-dialog-inner">
 			<div class="panels-text-filter">
 				<input type="search" class="widefat" placeholder="Filter" id="panels-text-filter-input" />
