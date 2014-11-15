@@ -589,7 +589,7 @@ function siteorigin_panels_body_class($classes){
 }
 add_filter('body_class', 'siteorigin_panels_body_class');
 
-include_once 'page-clone.php';
+include_once 'inc/page-clone.php';
 
 /**
  * A callback that replaces temporary break tag with actual line breaks.
